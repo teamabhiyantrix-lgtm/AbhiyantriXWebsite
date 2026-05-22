@@ -272,6 +272,30 @@ img {
     padding: 8px 16px;
     font-size: 13px;
   }
+  
+  .nav-actions .whatsapp-btn {
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    aspect-ratio: 1 / 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+  
+  .nav-actions .whatsapp-btn span {
+    display: none;
+  }
+  
+  .nav-actions .whatsapp-btn svg {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+  }
 }
 
 /* --- FOOTER --- */

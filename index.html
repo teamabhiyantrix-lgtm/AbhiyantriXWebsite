@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AbhiyantriX — From Code to Production | Student Developer Community</title>
+  <meta name="description"
+    content="AbhiyantriX is the modern playbook and community for student developers. Master real-world stacks, team up for hackathons, and ship code to production.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- --- STICKY NAVBAR --- -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar" id="main-navbar">
+        <a href="#home" class="logo">
+          <div class="logo-icon"><img src="assets/logo.png" alt=""></div>
+          <span>AbhiyantriX</span>
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#community" class="nav-link">Community</a></li>
+          <li><a href="#feedback" class="nav-link">Feedback</a></li>
+          <li><a href="#playbook" class="nav-link">Playbook</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="https://chat.whatsapp.com/Fp9jYfGvtQaBmyID4rCdyC" target="_blank" class="btn btn-primary whatsapp-btn">
+            <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path
+                d="M12.004 2C6.51 2 2.014 6.5 2.014 12c0 2.14.675 4.14 1.83 5.8l-1.2 4.41c-.085.31.185.59.49.49l4.54-1.23c1.6.98 3.48 1.53 5.33 1.53 5.49 0 9.99-4.5 9.99-10S17.5 2 12.004 2zm0 1.8c4.52 0 8.19 3.68 8.19 8.2s-3.67 8.2-8.19 8.2c-1.63 0-3.15-.49-4.44-1.33a.903.903 0 0 0-.7-.09l-2.61.71.7-2.58a.91.91 0 0 0-.08-.75A8.152 8.152 0 0 1 3.81 12c0-4.52 3.68-8.2 8.19-8.2zm-3.56 3.12c-.22 0-.47.08-.66.29-.25.27-.97.95-.97 2.31s.99 2.67 1.13 2.86c.14.19 1.95 2.97 4.72 4.17.66.28 1.17.46 1.57.59.66.21 1.26.18 1.74.11.53-.08 1.63-.67 1.86-1.31.23-.64.23-1.19.16-1.31-.07-.12-.25-.19-.53-.33s-1.63-.8-1.88-.9-.44-.14-.63.14c-.19.28-.73.92-.89 1.1-.16.19-.33.21-.61.07a7.712 7.712 0 0 1-2.28-1.41c-.88-.78-1.48-1.75-1.65-2.03-.17-.28-.02-.43.12-.57.13-.12.28-.33.42-.49.14-.16.19-.28.28-.46.09-.19.05-.35-.02-.49-.07-.14-.63-1.52-.86-2.08-.22-.54-.45-.46-.62-.47-.16-.01-.35-.01-.55-.01z" />
+            </svg>
+            <span>Join Community</span>
+          </a>
+          <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- --- 1. HOME VIEW --- -->
+  <section id="home" class="view-container active">
+    <!-- About-First Hero -->
+    <div class="hero">
+      <div class="container">
+        <div class="hero-wrapper">
+          <div class="hero-content animate-fade-up">
+            <div class="hero-tag">From Code to Production — the modern playbook for student developers.</div>
+            <h1 class="hero-heading">What is <span class="text-gradient">AbhiyantriX?</span></h1>
+            <p class="hero-text">
+              We bridge the gap between academic theory and real-world engineering. AbhiyantriX is a highly practical,
+              production-minded community where student developers team up to build clean stacks, collaborate on GitHub,
+              and deploy robust applications that scale.
+            </p>
+            <div class="hero-ctas">
+              <a href="https://chat.whatsapp.com/Fp9jYfGvtQaBmyID4rCdyC" target="_blank" class="btn btn-primary whatsapp-btn">
+                <span>Join AbhiyantriX</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#community" class="btn btn-secondary nav-trigger" data-target="community">
+                <span>See Community</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-slideshow-container animate-fade-up">
+            <div class="hero-stack" id="hero-slideshow-stack">
+
+              <!-- Stack Item 1 -->
+              <div class="hero-mockup-card pos-1" data-index="0">
+                <div class="mockup-header">
+                  <!-- <div class="mockup-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                  </div> -->
+                  <!-- <div class="mockup-address">abhiyantrix.org/weekly-checkins</div> -->
+                </div>
+                <div class="mockup-body">
+                  <!-- <span class="gallery-live-badge"><span class="pulse-dot"></span>Interactive</span> -->
+                  <img src="assets/logo.png" alt="Weekly Check-Ins screenshot">
+                  <div class="mockup-caption">
+                    <!-- <span class="caption-tag">Weekly Check-Ins</span>
+                    <h3 class="caption-title">Students demo builds & align on weekly sprints.</h3> -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- Stack Item 2 -->
+              <div class="hero-mockup-card pos-2" data-index="1">
+                <div class="mockup-header">
+                  <div class="mockup-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                  </div>
+                  <div class="mockup-address">abhiyantrix.org/live-builds</div>
+                </div>
+                <div class="mockup-body">
+                  <span class="gallery-live-badge"><span class="pulse-dot"></span>Live Build</span>
+                  <img src="assets/abimg1.jfif" alt="Live Coding Session screenshot">
+                  <div class="mockup-caption">
+                    <span class="caption-tag">Live Build Sessions</span>
+                    <h3 class="caption-title">Interactive Sessions with Developers.</h3>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Stack Item 3 -->
+              <div class="hero-mockup-card pos-3" data-index="2">
+                <div class="mockup-header">
+                  <div class="mockup-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                  </div>
+                  <div class="mockup-address">abhiyantrix.org/hackathon-prep</div>
+                </div>
+                <div class="mockup-body">
+                  <span class="gallery-live-badge"><span class="pulse-dot"></span>Hackathon</span>
+                  <img src="assets/abimg2.jfif" alt="Hackathon Planning board screenshot">
+                  <div class="mockup-caption">
+                    <span class="caption-tag">Hackathon Prep</span>
+                    <h3 class="caption-title">Training and rapid prototyping bootcamps.</h3>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Community-Focused Section (High Emphasis) -->
+    <div class="community-intro section-padding">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <span class="section-label">Inside the Circle</span>
+          <h2 class="section-title">What Happens Inside the AbhiyantriX Community?</h2>
+        </div>
+
+        <div class="community-grid">
+          <!-- Item 1 -->
+          <div class="community-card animate-fade-up">
+            <div class="community-icon-box">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="community-info">
+              <h3 class="community-card-title">Passionate Peer Support</h3>
+              <p class="community-card-desc">Get unstuck in minutes, not days. Talk directly with fellow students who
+                have debugged the same database issues, environment variables, or package conflicts.</p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="community-card animate-fade-up">
+            <div class="community-icon-box">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <div class="community-info">
+              <h3 class="community-card-title">Production Code Reviews</h3>
+              <p class="community-card-desc">We don't just check if it runs. Submit your code repositories for
+                constructive criticism regarding architecture, layout optimization, API design, and security setups.</p>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="community-card animate-fade-up">
+            <div class="community-icon-box">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <div class="community-info">
+              <h3 class="community-card-title">Hackathon Readiness</h3>
+              <p class="community-card-desc">Find teammates who actually ship. Align roles, brainstorm
+                production-centric pitches, and bootstrap your workspace with pre-configured boilerplates to win
+                deadlines.</p>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="community-card animate-fade-up">
+            <div class="community-info">
+              <div class="community-icon-box" style="margin-bottom:12px;">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="community-card-title">Shipping Guidance</h3>
+              <p class="community-card-desc">Gain confidence in production. Understand docker containerization, cloud VM
+                deployments, HTTPS certificates, API optimization, and CI/CD pipelines in simple terms.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Big CTA block -->
+        <div class="cta-block animate-fade-up">
+          <div class="cta-block-content">
+            <h3 class="cta-title">Ready to level up your dev journey?</h3>
+            <p class="cta-desc">Join our active WhatsApp hub to connect with ambitious student builders, attend our
+              weekly calls, and get access to modern developer playbooks.</p>
+            <a href="https://chat.whatsapp.com/Fp9jYfGvtQaBmyID4rCdyC" target="_blank" class="btn btn-white whatsapp-btn">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path
+                  d="M12.004 2C6.51 2 2.014 6.5 2.014 12c0 2.14.675 4.14 1.83 5.8l-1.2 4.41c-.085.31.185.59.49.49l4.54-1.23c1.6.98 3.48 1.53 5.33 1.53 5.49 0 9.99-4.5 9.99-10S17.5 2 12.004 2zm0 1.8c4.52 0 8.19 3.68 8.19 8.2s-3.67 8.2-8.19 8.2c-1.63 0-3.15-.49-4.44-1.33a.903.903 0 0 0-.7-.09l-2.61.71.7-2.58a.91.91 0 0 0-.08-.75A8.152 8.152 0 0 1 3.81 12c0-4.52 3.68-8.2 8.19-8.2zm-3.56 3.12c-.22 0-.47.08-.66.29-.25.27-.97.95-.97 2.31s.99 2.67 1.13 2.86c.14.19 1.95 2.97 4.72 4.17.66.28 1.17.46 1.57.59.66.21 1.26.18 1.74.11.53-.08 1.63-.67 1.86-1.31.23-.64.23-1.19.16-1.31-.07-.12-.25-.19-.53-.33s-1.63-.8-1.88-.9-.44-.14-.63.14c-.19.28-.73.92-.89 1.1-.16.19-.33.21-.61.07a7.712 7.712 0 0 1-2.28-1.41c-.88-.78-1.48-1.75-1.65-2.03-.17-.28-.02-.43.12-.57.13-.12.28-.33.42-.49.14-.16.19-.28.28-.46.09-.19.05-.35-.02-.49-.07-.14-.63-1.52-.86-2.08-.22-.54-.45-.46-.62-.47-.16-.01-.35-.01-.55-.01z" />
+              </svg>
+              <span>Join AbhiyantriX on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials / Feedback Section (High Emphasis) -->
+    <div class="testimonials-section section-padding">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <span class="section-label">Real Experiences</span>
+          <h2 class="section-title">What Our Builders Say</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Card 1 -->
+          <div class="testimonial-card animate-fade-up">
+            <p class="testimonial-quote">
+              "AbhiyantriX changed how I view development. I used to just code on localhost. Here, I learned Docker and
+              deployed my Next.js+FastAPI app on a cloud VM. The peer support is incredible."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AD</div>
+              <div class="author-info">
+                <h4 class="author-name">Harsh Kadam</h4>
+                <span class="author-college">3rd year Engineering Student</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="testimonial-card animate-fade-up">
+            <p class="testimonial-quote">
+              "Found my hackathon team in the community calls! We bootstrapped our project using the AbhiyantriX Git
+              playbook and won 2nd place. No academic fluff, just practical playbook instructions."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">SN</div>
+              <div class="author-info">
+                <h4 class="author-name">Sanvi Sawant</h4>
+                <span class="author-college">3rd year Engineering Student</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="testimonial-card animate-fade-up">
+            <p class="testimonial-quote">
+              "The live code reviews are absolute gold. I had a severe database lag in my project. A senior builder
+              reviewed my schema and suggested indexing. Learned more in 20 minutes than in semesters!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">RK</div>
+              <div class="author-info">
+                <h4 class="author-name">Marisa Menezes</h4>
+                <span class="author-college">CE, 3rd Year</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="testimonial-card animate-fade-up">
+            <p class="testimonial-quote">
+              "We didn't know how to deploy CORS safely. The FastAPI handshake playbook was so direct and precise.
+              Excellent community for developers who want to write production-ready code."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">IM</div>
+              <div class="author-info">
+                <h4 class="author-name">Keiyona Rodrigues</h4>
+                <span class="author-college">Undergrad at XIE,Mahim</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="testimonial-card animate-fade-up">
+            <p class="testimonial-quote">
+              "What I love is the consistency. The weekly Tuesday and Thursday sessions keep me motivated to build
+              instead of just consuming endless video tutorials. Highly recommended!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AP</div>
+              <div class="author-info">
+                <h4 class="author-name">Akanksha Thorat</h4>
+                <span class="author-college">Undergrad at XIE,Mahim</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="testimonial-card animate-fade-up">
+            <p class="testimonial-quote">
+              "From setting up a robust dev pipeline to managing production environments, AbhiyantriX gives you the
+              exact skills companies search for in modern developers."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">KS</div>
+              <div class="author-info">
+                <h4 class="author-name">Aarya Ingavale</h4>
+                <span class="author-college">CE, 3rd year</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Playbook Preview Section (Low Emphasis) -->
+    <div class="playbook-preview section-padding">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <span class="section-label">Playbook Resources</span>
+          <h2 class="section-title">Playbook Preview</h2>
+        </div>
+
+        <div class="playbook-grid">
+          <!-- Card 1 -->
+          <div class="playbook-card animate-fade-up">
+            <div class="playbook-card-meta">
+              <span class="playbook-type">Collaboration</span>
+              <span class="playbook-read-time">5 min read</span>
+            </div>
+            <h3 class="playbook-title">Production Git & GitHub Workflow</h3>
+            <p class="playbook-desc">A strict blueprint for feature branching, clean PR commit logs, squashing, and
+              continuous deployment setups.</p>
+            <a href="#playbook" class="playbook-link nav-trigger" data-target="playbook">
+              <span>View Preview</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+          <!-- Card 2 -->
+          <div class="playbook-card animate-fade-up">
+            <div class="playbook-card-meta">
+              <span class="playbook-type">Integration</span>
+              <span class="playbook-read-time">8 min read</span>
+            </div>
+            <h3 class="playbook-title">Next.js + FastAPI Handshake</h3>
+            <p class="playbook-desc">Step-by-step setup to bypass CORS, establish production proxies, and optimize data
+              caching between serverless stacks.</p>
+            <a href="#playbook" class="playbook-link nav-trigger" data-target="playbook">
+              <span>View Preview</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+          <!-- Card 3 -->
+          <div class="playbook-card animate-fade-up">
+            <div class="playbook-card-meta">
+              <span class="playbook-type">Hackathon</span>
+              <span class="playbook-read-time">6 min read</span>
+            </div>
+            <h3 class="playbook-title">The 48-Hour Hackathon Timeline</h3>
+            <p class="playbook-desc">How to partition tasks, manage sleep schedules, prepare production demos, and build
+              pitch decks to place top 3.</p>
+            <a href="#playbook" class="playbook-link nav-trigger" data-target="playbook">
+              <span>View Preview</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <p class="playbook-footer-note animate-fade-up">
+          💡 <strong>More playbooks coming soon.</strong> We are actively compiling resources for Docker, AWS
+          deployment, and AI-assisted building.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 2. ABOUT VIEW --- -->
+  <section id="about" class="view-container">
+    <div class="about-hero">
+      <div class="container">
+        <div class="about-intro-grid">
+          <div class="animate-fade-up">
+            <span class="section-label">Who We Are</span>
+            <h1 class="about-hero-title">Our Mission & Promise</h1>
+            <p class="about-hero-para">
+              AbhiyantriX was founded on a simple insight: traditional engineering curricula teach theoretical computer
+              science, but ignore how real-world software is structured, delivered, and managed.
+            </p>
+            <p class="about-hero-para">
+              Our promise is to provide zero-fluff, hands-on playbooks and a highly interactive peer environment that
+              empowers you to build, deploy, and scale software.
+            </p>
+
+            <div class="about-hero-metrics">
+              <div class="metric-card">
+                <div class="metric-num">100+</div>
+                <div class="metric-label">Student Builders</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-num">25+</div>
+                <div class="metric-label">Shipped Projects</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-num">12+</div>
+                <div class="metric-label">Hackathon Wins</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-hero-badge animate-fade-up">
+            <h3 class="about-badge-title">Our Engineering Philosophy</h3>
+            <p class="about-badge-text">
+              "We value running code over theoretical proofs. We believe production thinking should start from day one,
+              not after graduation. True developers are forged by deploying to real servers, debugging live issues, and
+              getting strict, helpful feedback from peers."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Expectation Section -->
+    <div class="expect-section section-padding">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <span class="section-label">The Playbook Vows</span>
+          <h2 class="section-title">What Students Expect From AbhiyantriX</h2>
+        </div>
+
+        <div class="expect-grid">
+          <!-- Expect Card 1 -->
+          <div class="expect-card animate-fade-up">
+            <div class="expect-num">01 / CLARITY</div>
+            <h3 class="expect-title">Absolute Clarity</h3>
+            <p class="expect-desc">No academic hand-waving or industry buzzwords. Every playbook is written in direct,
+              simple, and executable terms.</p>
+          </div>
+          <!-- Expect Card 2 -->
+          <div class="expect-card animate-fade-up">
+            <div class="expect-num">02 / STEP-BY-STEP</div>
+            <h3 class="expect-title">Step-by-Step Playbooks</h3>
+            <p class="expect-desc">Clear engineering recipes for complex integrations, databases, and servers. Run the
+              command and inspect the result.</p>
+          </div>
+          <!-- Expect Card 3 -->
+          <div class="expect-card animate-fade-up">
+            <div class="expect-num">03 / REAL-WORLD STACKS</div>
+            <h3 class="expect-title">Real-World Stacks</h3>
+            <p class="expect-desc">Work with modern tools used by fast-growing tech teams: Next.js, FastAPIs, Docker, VM
+              hosting, and Git structures.</p>
+          </div>
+          <!-- Expect Card 4 -->
+          <div class="expect-card animate-fade-up">
+            <div class="expect-num">04 / PROJECT EXAMPLES</div>
+            <h3 class="expect-title">Project-First Learning</h3>
+            <p class="expect-desc">No boring isolated code snippets. Learn by designing and deploying full-stack,
+              open-source repositories from scratch.</p>
+          </div>
+          <!-- Expect Card 5 -->
+          <div class="expect-card animate-fade-up">
+            <div class="expect-num">05 / CAREER & HACKATHONS</div>
+            <h3 class="expect-title">Outcomes Matter</h3>
+            <p class="expect-desc">Learn how to capture judges' attention, demonstrate technical depth to recruiters,
+              and build resume-worthy deployments.</p>
+          </div>
+          <!-- Expect Card 6 -->
+          <div class="expect-card animate-fade-up">
+            <div class="expect-num">06 / CONSISTENCY</div>
+            <h3 class="expect-title">Weekly Momentum</h3>
+            <p class="expect-desc">Keep active through community sprints, live review sessions, and collaborative
+              hackathon bootcamps.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Founders Section -->
+    <div class="founders-section section-padding">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <span class="section-label">Founding Team</span>
+          <h2 class="section-title">About the Founders</h2>
+        </div>
+
+        <div class="founders-grid">
+          <!-- Founder 1 -->
+          <div class="founder-card animate-fade-up">
+            <div class="founder-avatar"><img src="assets/shreyas photo.JPG" alt=""></div>
+            <h3 class="founder-name">Shreyas Mirashi</h3>
+            <span class="founder-role">Founder & community growth</span>
+            <p class="founder-bio">
+              Product strategist and hackathon veteran with a track record of organizing national-level technical
+              competitions. Shreyas excels at team architecture and pitch deck optimization, helping student developers
+              bridge the gap between technical potential and professional marketability. He leads all developer
+              networking and ecosystem expansion initiatives.
+            </p>
+          </div>
+          <!-- Founder 2 -->
+          <div class="founder-card animate-fade-up">
+            <div class="founder-avatar"><img src="assets/samphoto.jpeg" alt=""></div>
+            <h3 class="founder-name">Muthusam Thevar</h3>
+            <span class="founder-role">Co-Founder & Engineering Lead</span>
+            <p class="founder-bio">
+              Systems architect and full-stack developer with a focus on building production-grade infrastructure.
+              Muthusam specializes in designing scalable API blueprints and optimizing containerization workflows. He is
+              passionate about demystifying complex technical stacks and guiding the next generation of engineers
+              through the transition from "code-to-production.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 3. COMMUNITY VIEW --- -->
+  <section id="community" class="view-container">
+    <!-- What You Get Inside -->
+    <div class="inside-section section-padding">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <span class="section-label">Community Hub</span>
+          <h2 class="section-title">What You Get Inside the Community</h2>
+        </div>
+
+        <div class="inside-list">
+          <!-- Item 1 -->
+          <div class="inside-item animate-fade-up">
+            <div class="inside-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <div>
+              <h3 class="inside-title">Active 24/7 WhatsApp Channels</h3>
+              <p class="inside-desc">A highly organized workspace grouped by topics: General Chat, Project Feedback, Dev
+                Help, Hackathons, and Job Leads.</p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="inside-item animate-fade-up">
+            <div class="inside-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <div>
+              <h3 class="inside-title">Code Battles & Reviews</h3>
+              <p class="inside-desc">Submit your GitHub PRs on our dedicated days and receive technical reviews from
+                senior members who write clean code daily.</p>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="inside-item animate-fade-up">
+            <div class="inside-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <div>
+              <h3 class="inside-title">Templates & Boilerplate Libraries</h3>
+              <p class="inside-desc">Skip the setup. Access custom-designed UI kits, Next.js setups, API setups, and
+                Dockerfiles to boot apps instantly.</p>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="inside-item animate-fade-up">
+            <div class="inside-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <div>
+              <h3 class="inside-title">Direct Networking with Top Builders</h3>
+              <p class="inside-desc">Team up with ambitious, self-taught student engineers who actively ship code, enter
+                national hackathons, and construct solid tech products.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Weekly Rhythm / Events -->
+    <div class="rhythm-section section-padding">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <span class="section-label">Calender</span>
+          <h2 class="section-title">Our Rhythm</h2>
+        </div>
+
+        <div class="rhythm-timeline">
+          <!-- Tuesday -->
+          <div class="rhythm-item animate-fade-up">
+            <div class="rhythm-day">
+              <span class="rhythm-day-name">weekly</span>
+              <span class="rhythm-day-time">online</span>
+            </div>
+            <div class="rhythm-content">
+              <h3 class="rhythm-title">Hackathon Tactics & Brainstorming</h3>
+              <p class="rhythm-desc">We review trending ideas, analyze previous winning solutions, match teams, and
+                coordinate rapid layout workflows.</p>
+            </div>
+          </div>
+          <!-- Thursday -->
+          <div class="rhythm-item animate-fade-up">
+            <div class="rhythm-day">
+              <span class="rhythm-day-name">Monthly</span>
+              <span class="rhythm-day-time">online</span>
+            </div>
+            <div class="rhythm-content">
+              <h3 class="rhythm-title">Live Build & Deployment Labs</h3>
+              <p class="rhythm-desc">An interactive build lab where we dockerize backends, set up reverse proxies,
+                configure SSL, or build dynamic React components live.</p>
+            </div>
+          </div>
+          <!-- Saturday -->
+          <div class="rhythm-item animate-fade-up">
+            <div class="rhythm-day">
+              <span class="rhythm-day-name">Half-yearly</span>
+              <span class="rhythm-day-time">Online</span>
+            </div>
+            <div class="rhythm-content">
+              <h3 class="rhythm-title">Community Call & Project Showcases</h3>
+              <p class="rhythm-desc">Our flagship hangout session! Members show off their side projects, ask for
+                architecture guidance, and participate in peer review blocks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Who it's for -->
+    <div class="audience-section section-padding">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <span class="section-label">Is AX For You?</span>
+          <h2 class="section-title">Who It's Specially Designed For</h2>
+        </div>
+
+        <div class="audience-grid">
+          <!-- Card 1 -->
+          <div class="audience-card animate-fade-up">
+            <div class="audience-avatar-icon">🌱</div>
+            <h3 class="audience-title">The Beginner Builder</h3>
+            <p class="audience-desc">You know basic programming but struggle to build a real product. You want
+              step-by-step guidance on how to piece stacks together.</p>
+          </div>
+          <!-- Card 2 -->
+          <div class="audience-card animate-fade-up">
+            <div class="audience-avatar-icon">🏆</div>
+            <h3 class="audience-title">The Hackathon Builder</h3>
+            <p class="audience-desc">You enter events frequently but want to stop shipping messy code. You want robust
+              templates, faster tooling, and winning presentation tips.</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="audience-card animate-fade-up">
+            <div class="audience-avatar-icon">💻</div>
+            <h3 class="audience-title">The Intermediate Dev</h3>
+            <p class="audience-desc">Your projects run on localhost, but you're clueless about containers, server
+              scaling, reverse proxies, and deployment architectures.</p>
+          </div>
+          <!-- Card 4 -->
+          <div class="audience-card animate-fade-up">
+            <div class="audience-avatar-icon">🚀</div>
+            <h3 class="audience-title">Resource-Constrained Student</h3>
+            <p class="audience-desc">You have no access to expensive coding bootcamps or elite tech mentors. You seek a
+              rich, free ecosystem of builders to expand your network.</p>
+          </div>
+        </div>
+
+        <!-- Big CTA block -->
+        <div class="cta-block animate-fade-up" style="margin-top: 80px;">
+          <div class="cta-block-content">
+            <h3 class="cta-title">Join AbhiyantriX Today</h3>
+            <p class="cta-desc">Start building and shipping with over 500+ student developers from top colleges. No
+              fees, no fluff, just pure engineering.</p>
+            <a href="https://chat.whatsapp.com/Fp9jYfGvtQaBmyID4rCdyC" target="_blank" class="btn btn-white whatsapp-btn">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path
+                  d="M12.004 2C6.51 2 2.014 6.5 2.014 12c0 2.14.675 4.14 1.83 5.8l-1.2 4.41c-.085.31.185.59.49.49l4.54-1.23c1.6.98 3.48 1.53 5.33 1.53 5.49 0 9.99-4.5 9.99-10S17.5 2 12.004 2zm0 1.8c4.52 0 8.19 3.68 8.19 8.2s-3.67 8.2-8.19 8.2c-1.63 0-3.15-.49-4.44-1.33a.903.903 0 0 0-.7-.09l-2.61.71.7-2.58a.91.91 0 0 0-.08-.75A8.152 8.152 0 0 1 3.81 12c0-4.52 3.68-8.2 8.19-8.2zm-3.56 3.12c-.22 0-.47.08-.66.29-.25.27-.97.95-.97 2.31s.99 2.67 1.13 2.86c.14.19 1.95 2.97 4.72 4.17.66.28 1.17.46 1.57.59.66.21 1.26.18 1.74.11.53-.08 1.63-.67 1.86-1.31.23-.64.23-1.19.16-1.31-.07-.12-.25-.19-.53-.33s-1.63-.8-1.88-.9-.44-.14-.63.14c-.19.28-.73.92-.89 1.1-.16.19-.33.21-.61.07a7.712 7.712 0 0 1-2.28-1.41c-.88-.78-1.48-1.75-1.65-2.03-.17-.28-.02-.43.12-.57.13-.12.28-.33.42-.49.14-.16.19-.28.28-.46.09-.19.05-.35-.02-.49-.07-.14-.63-1.52-.86-2.08-.22-.54-.45-.46-.62-.47-.16-.01-.35-.01-.55-.01z" />
+              </svg>
+              <span>Join AbhiyantriX (WhatsApp)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-section section-padding">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <span class="section-label">Have Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-wrapper">
+          <!-- FAQ 1 -->
+          <div class="faq-item animate-fade-up">
+            <button class="faq-question">
+              <span>Is there a fee to join the AbhiyantriX community?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>No, AbhiyantriX is entirely free! We are a student-led, volunteer-driven movement designed to
+                democratize high-fidelity engineering playbooks and robust community support for student developers
+                worldwide.</p>
+            </div>
+          </div>
+          <!-- FAQ 2 -->
+          <div class="faq-item animate-fade-up">
+            <button class="faq-question">
+              <span>What prerequisites do I need before joining?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Basic knowledge of any programming language (like Python or JavaScript) and familiarization with
+                HTML/CSS is helpful. However, if you are a absolute beginner eager to learn, our structured playbooks
+                will guide you from setup to deployment!</p>
+            </div>
+          </div>
+          <!-- FAQ 3 -->
+          <div class="faq-item animate-fade-up">
+            <button class="faq-question">
+              <span>Are these events physical or online?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>All our weekly rhythm sessions—including Tuesday brainstorming, Thursday build labs, and Saturday
+                community showcases—are hosted virtually via Google Meet so that students across different campuses can
+                collaborate easily.</p>
+            </div>
+          </div>
+          <!-- FAQ 4 -->
+          <div class="faq-item animate-fade-up">
+            <button class="faq-question">
+              <span>How will this help me win hackathons?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We supply pre-configured, production-tested boilerplate templates (such as Next.js frontends connected
+                to FastAPI backends with Docker containers). This saves you hours of baseline environment setup, letting
+                your team focus exclusively on custom features and polishing pitches.</p>
+            </div>
+          </div>
+          <!-- FAQ 5 -->
+          <div class="faq-item animate-fade-up">
+            <button class="faq-question">
+              <span>Can I submit my projects for review?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely! We encourage members to submit their active repository pull requests in our WhatsApp
+                channel. During our check-ins and showcases, we analyze schemas, API structures, and layout performances
+                to give you practical architecture notes.</p>
+            </div>
+          </div>
+          <!-- FAQ 6 -->
+          <div class="faq-item animate-fade-up">
+            <button class="faq-question">
+              <span>How can I contribute to the community?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>You can contribute by actively answering fellow students' debugging questions on WhatsApp,
+                collaborating on open-source templates, sharing your build session screenshots, or helping to compile
+                new engineering playbooks!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 4. FEEDBACK VIEW --- -->
+  <section id="feedback" class="view-container">
+    <div class="container">
+      <div class="feedback-container">
+
+        <!-- Left Side: Header and Testimonials -->
+        <div class="feedback-left animate-fade-up">
+          <h1 class="feedback-intro-title">Share Your Journey</h1>
+          <p class="feedback-intro-desc">
+            At AbhiyantriX, we thrive on practical outcomes. Whether you successfully resolved a Docker setup, joined a
+            winning hackathon team, or got a code review that clarified your architecture, we want to hear from you!
+          </p>
+
+          <div class="testimonials-grid" style="grid-template-columns: 1fr; gap: 20px;">
+            <div class="testimonial-card" style="padding: 24px;">
+              <p class="testimonial-quote" style="font-size:14px;">
+                "I submitted my code review on a Wednesday, and by Thursday night, two senior builders gave me detailed
+                feedback on optimizing my SQL queries. Solved my latency issues completely!"
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar" style="width:36px; height:36px; font-size:13px;">VK</div>
+                <div class="author-info">
+                  <h4 class="author-name" style="font-size:14px;">Vikram K.</h4>
+                  <span class="author-college" style="font-size:11px;">RVCE Bangalore</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card" style="padding: 24px;">
+              <p class="testimonial-quote" style="font-size:14px;">
+                "The 48-Hour Hackathon playbook was our bible. We knew exactly when to freeze features, how to prepare
+                slide metrics, and deployed on Vercel/Docker seamlessly. Easiest pitch ever!"
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar" style="width:36px; height:36px; font-size:13px;">AM</div>
+                <div class="author-info">
+                  <h4 class="author-name" style="font-size:14px;">Anjali M.</h4>
+                  <span class="author-college" style="font-size:11px;">COEP Pune</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Interactive Form / Success Panel -->
+        <div class="animate-fade-up">
+          <div class="feedback-form-card" id="feedback-form-card">
+            <h2 class="form-title">Submit Community Feedback</h2>
+            <form id="community-feedback-form">
+              <div class="form-group">
+                <label for="form-name" class="form-label">Full Name</label>
+                <input type="text" id="form-name" class="form-input" placeholder="e.g. Rahul Sharma" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-college" class="form-label">College / Institution</label>
+                <input type="text" id="form-college" class="form-input" placeholder="e.g. NIT Trichy" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">Email Address</label>
+                <input type="email" id="form-email" class="form-input" placeholder="e.g. rahul@college.edu" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-linkedin" class="form-label">LinkedIn URL (Optional)</label>
+                <input type="url" id="form-linkedin" class="form-input" placeholder="https://linkedin.com/in/username">
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Your Feedback / Story</label>
+                <textarea id="form-message" class="form-input form-textarea"
+                  placeholder="How did AbhiyantriX help you? Did you join calls, deploy stacks, or find partners?"
+                  required></textarea>
+              </div>
+
+              <div class="form-submit-wrapper">
+                <button type="submit" class="btn btn-primary" style="width: 100%; height:48px;" id="form-submit-btn">
+                  <span>Submit Story</span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Simulated Success Panel -->
+          <div class="feedback-success-card" id="feedback-success-card">
+            <div class="success-icon-box">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="success-title">Feedback Submitted!</h3>
+            <p class="success-desc">Thank you for sharing your experience. Our community grows stronger when builders
+              share their engineering journeys!</p>
+            <button class="btn btn-secondary" id="form-reset-btn">Submit Another Response</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 5. PLAYBOOK VIEW (De-emphasized) --- -->
+  <section id="playbook" class="view-container">
+    <div class="playbook-header animate-fade-up">
+      <div class="container">
+        <span class="section-label">Engineering Recipes</span>
+        <h1 class="feedback-intro-title">AbhiyantriX Playbooks</h1>
+        <p class="feedback-intro-desc" style="max-width: 600px; margin: 12px auto 0;">
+          Our curated collection of production blueprints for student builders. Learn to configure, containerize, and
+          deploy stacks without fluff.
+        </p>
+
+        <!-- Categories filters -->
+        <div class="playbook-categories">
+          <button class="category-tab active" data-filter="all">All Playbooks</button>
+          <button class="category-tab" data-filter="hackathon">Hackathon</button>
+          <button class="category-tab" data-filter="stack">Modern Stack</button>
+          <button class="category-tab" data-filter="collab">Collaboration</button>
+          <button class="category-tab" data-filter="ai">AI for Builders</button>
+          <button class="category-tab" data-filter="production">Production Thinking</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Playbooks Full Grid -->
+    <div class="container">
+      <div class="playbook-full-grid">
+
+        <!-- Active Card 1 -->
+        <div class="playbook-card animate-fade-up" data-category="collab">
+          <div class="playbook-card-meta">
+            <span class="playbook-type">Collaboration</span>
+            <span class="playbook-read-time">5 min read</span>
+          </div>
+          <h3 class="playbook-title">Production Git & GitHub Workflow</h3>
+          <p class="playbook-desc">A strict blueprint for feature branching, clean pull requests, commit squashing, and
+            automating builds upon merges.</p>
+          <a href="https://chat.whatsapp.com/Fp9jYfGvtQaBmyID4rCdyC" target="_blank" class="playbook-link">
+            <span>Read on WhatsApp</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Active Card 2 -->
+        <div class="playbook-card animate-fade-up" data-category="stack">
+          <div class="playbook-card-meta">
+            <span class="playbook-type">Modern Stack</span>
+            <span class="playbook-read-time">8 min read</span>
+          </div>
+          <h3 class="playbook-title">Next.js + FastAPI Handshake</h3>
+          <p class="playbook-desc">Step-by-step setup to bypass CORS, establish production reverse proxies, and securely
+            handle cookies across environments.</p>
+          <a href="https://chat.whatsapp.com/Fp9jYfGvtQaBmyID4rCdyC" target="_blank" class="playbook-link">
+            <span>Read on WhatsApp</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Active Card 3 -->
+        <div class="playbook-card animate-fade-up" data-category="hackathon">
+          <div class="playbook-card-meta">
+            <span class="playbook-type">Hackathon</span>
+            <span class="playbook-read-time">6 min read</span>
+          </div>
+          <h3 class="playbook-title">The 48-Hour Hackathon Timeline</h3>
+          <p class="playbook-desc">How to manage sprints, freeze layouts, practice slide reviews, and leverage
+            deployment templates to dominate timelines.</p>
+          <a href="https://chat.whatsapp.com/Fp9jYfGvtQaBmyID4rCdyC" target="_blank" class="playbook-link">
+            <span>Read on WhatsApp</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Locked Card 1 -->
+        <div class="playbook-locked-card animate-fade-up" data-category="production">
+          <span class="locked-badge">
+            <svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor">
+              <path
+                d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 5a3 3 0 0 1 6 0v3H9V7zm3 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+            </svg>
+            <span>Coming Soon</span>
+          </span>
+          <div class="locked-icon-center">🔒</div>
+          <h3 class="playbook-title">FastAPI + Docker Containerization</h3>
+          <p class="playbook-desc" style="color: var(--text-light);">How to write compact multi-stage Dockerfiles, set
+            up volume mappings, and execute postgres migrations.</p>
+        </div>
+
+        <!-- Locked Card 2 -->
+        <div class="playbook-locked-card animate-fade-up" data-category="production">
+          <span class="locked-badge">🔒 Coming Soon</span>
+          <div class="locked-icon-center">🔒</div>
+          <h3 class="playbook-title">Cloud VM Deployments & Nginx</h3>
+          <p class="playbook-desc" style="color: var(--text-light);">Configuring static IP, setting up Nginx reverse
+            proxy blocks, mapping DNS, and securing SSL certificates.</p>
+        </div>
+
+        <!-- Locked Card 3 -->
+        <div class="playbook-locked-card animate-fade-up" data-category="ai">
+          <span class="locked-badge">🔒 Coming Soon</span>
+          <div class="locked-icon-center">🔒</div>
+          <h3 class="playbook-title">AI for Builders: Coding with LLMs</h3>
+          <p class="playbook-desc" style="color: var(--text-light);">Leveraging AI agents and LLMs for scaffolding APIs,
+            writing unit tests, and rapid debugging workflows.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- --- 6. CONTACT VIEW --- -->
+  <section id="contact" class="view-container">
+    <div class="container section-padding">
+      <div class="section-header animate-fade-up">
+        <span class="section-label">Get in Touch</span>
+        <h2 class="section-title">Contact AbhiyantriX</h2>
+        <p class="playbook-desc" style="max-width: 600px; margin: 12px auto 0; text-align: center;">
+          Have questions about joining, collaborating, or sponsoring our developer initiatives? Drop us a line!
+        </p>
+      </div>
+
+      <div class="contact-grid animate-fade-up">
+        <!-- Email Card -->
+        <a href="mailto:teamabhiyantrix@gmail.com" class="contact-card">
+          <div class="contact-icon-box" style="background-color: #FEF2F2; color: #EF4444;">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <h3 class="contact-card-title">Official Email</h3>
+          <p class="contact-card-value">teamabhiyantrix@gmail.com</p>
+          <span class="contact-card-action">Send an Email &rarr;</span>
+        </a>
+
+        <!-- LinkedIn Card -->
+        <a href="https://linkedin.com/company/abhiyantrix27" target="_blank" class="contact-card">
+          <div class="contact-icon-box" style="background-color: #EFF6FF; color: #1D4ED8;">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+          </div>
+          <h3 class="contact-card-title">LinkedIn Profile</h3>
+          <p class="contact-card-value">linkedin.com/company/abhiyantrix</p>
+          <span class="contact-card-action">Connect with Us &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- TOAST CONTROLLER --- -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- --- FOOTER --- -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">
+            <div class="logo-icon"><img src="assets/logo.png" alt=""></div>
+            <span>AbhiyantriX</span>
+          </a>
+          <p class="footer-tagline">“From Code to Production — the modern playbook for student developers.”</p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Community</h4>
+          <ul class="footer-links">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About Mission</a></li>
+            <li><a href="#community" class="footer-link">Rhythm & events</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="#playbook" class="footer-link">Playbook Hub</a></li>
+            <li><a href="#feedback" class="footer-link">Student Stories</a></li>
+            <li><a href="#contact" class="footer-link">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4 class="footer-heading">Weekly Playbook Snippets</h4>
+          <p class="footer-desc">Subscribe to receive compact coding recipes direct to your inbox. Zero spam.</p>
+          <div class="newsletter-form">
+            <input type="email" id="newsletter-email" placeholder="student@college.edu" class="newsletter-input"
+              aria-label="Email subscription">
+            <button class="btn btn-primary" id="newsletter-btn" style="padding: 0 16px;">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 AbhiyantriX Community. All rights reserved. Created for student builders worldwide.</span>
+
+        <div class="footer-socials">
+          <!-- <a href="https://github.com/abhiyantrix" class="social-icon" aria-label="GitHub Page">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.867 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.577.688.479C19.138 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          </a> -->
+          <a href="https://linkedin.com/company/abhiyantrix27" class="social-icon" aria-label="LinkedIn Profile">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+          </a>
+          <a href="https://chat.whatsapp.com/Fp9jYfGvtQaBmyID4rCdyC" class="social-icon" aria-label="WhatsApp Invite Link">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path
+                d="M12.004 2C6.51 2 2.014 6.5 2.014 12c0 2.14.675 4.14 1.83 5.8l-1.2 4.41c-.085.31.185.59.49.49l4.54-1.23c1.6.98 3.48 1.53 5.33 1.53 5.49 0 9.99-4.5 9.99-10S17.5 2 12.004 2zm0 1.8c4.52 0 8.19 3.68 8.19 8.2s-3.67 8.2-8.19 8.2c-1.63 0-3.15-.49-4.44-1.33a.903.903 0 0 0-.7-.09l-2.61.71.7-2.58a.91.91 0 0 0-.08-.75A8.152 8.152 0 0 1 3.81 12c0-4.52 3.68-8.2 8.19-8.2z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

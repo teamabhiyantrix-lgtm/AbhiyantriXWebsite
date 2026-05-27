@@ -148,8 +148,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const frontCard = cards.find(card => card.classList.contains('pos-1'));
       const middleCard = cards.find(card => card.classList.contains('pos-2'));
       const backCard = cards.find(card => card.classList.contains('pos-3'));
+      const backCard1 = cards.find(card => card.classList.contains('pos-4'));
 
-      if (!frontCard || !middleCard || !backCard) {
+      if (!frontCard || !middleCard || !backCard || !backCard1) {
         isTransitioning = false;
         return;
       }
@@ -164,10 +165,16 @@ document.addEventListener('DOMContentLoaded', () => {
       backCard.classList.remove('pos-3');
       backCard.classList.add('pos-2');
 
+      backCard1.classList.remove('pos-4');
+      backCard1.classList.add('pos-3');
+
+
+ 
+
       // Phase 2: After transition (600ms), send old front card to the back of the stack
       setTimeout(() => {
         frontCard.classList.remove('pos-1', 'exiting');
-        frontCard.classList.add('pos-3');
+        frontCard.classList.add('pos-4');
         isTransitioning = false;
       }, 600); // Timed with --transition-slow (0.6s) in CSS
     }

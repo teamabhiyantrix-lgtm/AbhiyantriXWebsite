@@ -1950,3 +1950,572 @@ img {
     gap: 20px;
   }
 }
+
+/* ==========================================================================
+   --- EVENTS VIEW & DYNAMIC 3D PHOTO DECK STYLING ---
+   ========================================================================== */
+
+/* Events View Header & Tabs */
+.events-header {
+  text-align: center;
+  padding: 40px 0 20px;
+}
+
+.event-categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 32px 0 16px;
+}
+
+.event-tab {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50px;
+  background-color: var(--bg-secondary);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-fast);
+}
+
+.event-tab:hover {
+  background-color: var(--border-color);
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.event-tab.active {
+  background: var(--accent-gradient);
+  color: #FFFFFF;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.15);
+}
+
+/* Events Grid Layout */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 24px;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 992px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 680px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Premium Event Card */
+.event-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-card);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: visible; /* Crucial for 3D stack overflow and offsets */
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+  border-color: rgba(29, 78, 216, 0.25);
+}
+
+/* Interactive 3D Photo Stack */
+.event-gallery-stack {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 28px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.event-gallery-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-sm);
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 4px 12px rgba(11, 31, 59, 0.12);
+  transition: transform var(--transition-slow), opacity var(--transition-slow), z-index var(--transition-slow);
+  backface-visibility: hidden;
+  user-select: none;
+}
+
+/* Absolute Stack Layering (Resting State) */
+.event-gallery-photo.photo-top {
+  z-index: 3;
+  transform: translate3d(0, 0, 0) rotate(0deg);
+  opacity: 1;
+}
+
+.event-gallery-photo.photo-middle {
+  z-index: 2;
+  transform: translate3d(8px, -8px, -15px) rotate(2deg);
+  opacity: 0.9;
+}
+
+.event-gallery-photo.photo-back {
+  z-index: 1;
+  transform: translate3d(16px, -16px, -30px) rotate(-2deg);
+  opacity: 0.75;
+}
+
+/* Hover Fanning/Spreading Animation */
+.event-card:hover .event-gallery-photo.photo-top {
+  transform: translate3d(-12px, -4px, 15px) rotate(-3.5deg);
+}
+
+.event-card:hover .event-gallery-photo.photo-middle {
+  transform: translate3d(6px, -10px, 0) rotate(1.5deg);
+}
+
+.event-card:hover .event-gallery-photo.photo-back {
+  transform: translate3d(22px, -15px, -15px) rotate(5deg);
+}
+
+/* Shuffling slide-off animation when clicked */
+.event-gallery-photo.shuffling-out {
+  animation: shuffleOut 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  z-index: 4; /* Stay on top during exit slide */
+}
+
+@keyframes shuffleOut {
+  0% {
+    transform: translate3d(-12px, -4px, 15px) rotate(-3.5deg);
+    opacity: 1;
+  }
+  40% {
+    transform: translate3d(-125%, 15px, 30px) rotate(-8deg);
+    opacity: 0.4;
+  }
+  60% {
+    transform: translate3d(-125%, 15px, -50px) rotate(-8deg);
+    opacity: 0.15;
+  }
+  100% {
+    transform: translate3d(16px, -16px, -30px) rotate(-2deg);
+    opacity: 0.75;
+    z-index: 1;
+  }
+}
+
+/* Hint indicators for interactive elements */
+.gallery-interactive-hint {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background-color: rgba(11, 31, 59, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: #FFFFFF;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0.8;
+  transition: opacity var(--transition-fast);
+}
+
+.event-card:hover .gallery-interactive-hint {
+  opacity: 1;
+}
+
+/* Event Metadata Details Section */
+.event-card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 12px;
+}
+
+.event-card-type-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent);
+  background-color: var(--accent-light);
+  padding: 4px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.event-card-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.3;
+}
+
+.event-card-meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 6px 0 12px;
+}
+
+.event-card-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  color: var(--text-muted);
+}
+
+.event-card-meta-item svg {
+  flex-shrink: 0;
+  color: var(--text-light);
+}
+
+.event-card-action-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: var(--border-radius-sm);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all var(--transition-fast);
+  margin-top: auto;
+}
+
+.event-card-action-btn:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   --- DETAILS DRAWER / MODAL STYLING ---
+   ========================================================================== */
+
+.event-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(11, 31, 59, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  justify-content: flex-end; /* Drawer slides in from the right */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--transition-normal), visibility var(--transition-normal);
+}
+
+.event-modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.event-modal-content {
+  height: 100%;
+  width: 100%;
+  max-width: 620px;
+  background-color: #FFFFFF;
+  box-shadow: -8px 0 32px rgba(11, 31, 59, 0.15);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(100%, 0, 0); /* Resting off-screen to the right */
+  transition: transform var(--transition-normal) cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.event-modal-overlay.open .event-modal-content {
+  transform: translate3d(0, 0, 0); /* Slide in! */
+}
+
+/* Modal Close Button */
+.event-modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  z-index: 10;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.event-modal-close:hover {
+  background-color: #EF4444;
+  border-color: #EF4444;
+  color: #FFFFFF;
+  transform: rotate(90deg);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
+/* Modal Scrollable Body */
+.event-modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 600px) {
+  .event-modal-body {
+    padding: 32px 24px;
+  }
+  .event-modal-close {
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Modal Header Content */
+.modal-header-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.modal-title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.25;
+}
+
+/* Modal Metadata Grid */
+.modal-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 20px 0;
+  margin: 8px 0;
+}
+
+@media (max-width: 480px) {
+  .modal-meta-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.modal-meta-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal-meta-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-light);
+  letter-spacing: 0.5px;
+}
+
+.modal-meta-val {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* Modal Content Descriptions */
+.modal-description-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.modal-description-text {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Modal Takeaway Bullet List */
+.modal-takeaway-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.modal-takeaway-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.modal-takeaway-item svg {
+  flex-shrink: 0;
+  color: #10B981;
+  margin-top: 3px;
+}
+
+/* Modal Resources & Action Buttons */
+.modal-action-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  padding: 24px;
+  margin: 10px 0;
+}
+
+.modal-action-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.modal-buttons-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.modal-btn {
+  flex: 1;
+  min-width: 140px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--border-radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.modal-btn-luma {
+  background: var(--accent-gradient);
+  color: #FFFFFF;
+  border: 1px solid transparent;
+}
+
+.modal-btn-luma:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2);
+}
+
+.modal-btn-resource {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-color);
+  color: var(--primary);
+}
+
+.modal-btn-resource:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #FFFFFF;
+  transform: translateY(-1.5px);
+}
+
+/* Modal Multi-Image Grid */
+.modal-gallery-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.modal-image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 8px;
+}
+
+@media (max-width: 480px) {
+  .modal-image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.modal-grid-photo {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.modal-grid-photo:hover {
+  transform: scale(1.04);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+}
+
+/* Lock background scroll when drawer is open */
+body.modal-open {
+  overflow: hidden;
+  height: 100vh;
+}

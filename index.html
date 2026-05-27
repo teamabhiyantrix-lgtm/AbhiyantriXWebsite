@@ -25,6 +25,7 @@
           <li><a href="#home" class="nav-link active">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#community" class="nav-link">Community</a></li>
+          <li><a href="#events" class="nav-link">Events</a></li>
           <li><a href="#feedback" class="nav-link">Feedback</a></li>
           <li><a href="#playbook" class="nav-link">Playbook</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -831,6 +832,34 @@
     </div>
   </section>
 
+  <!-- --- 3.5. EVENTS VIEW --- -->
+  <section id="events" class="view-container">
+    <div class="events-header animate-fade-up">
+      <div class="container">
+        <span class="section-label">Our Legacy</span>
+        <h1 class="feedback-intro-title">Conducted Events & Workshops</h1>
+        <p class="feedback-intro-desc" style="max-width: 600px; margin: 12px auto 0;">
+          A retrospective of hands-on builds, technical bootcamps, and developer gatherings conducted by the AbhiyantriX community.
+        </p>
+
+        <!-- Category Filters -->
+        <div class="event-categories">
+          <button class="event-tab active" data-filter="all">All Events</button>
+          <button class="event-tab" data-filter="build">Live Builds</button>
+          <button class="event-tab" data-filter="hackathon">Hackathons</button>
+          <button class="event-tab" data-filter="orientation">Academic Sprints</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Events Grid -->
+    <div class="container">
+      <div class="events-grid" id="events-grid-container">
+        <!-- Event Cards will be dynamically injected here by JS for dynamic shuffle handling -->
+      </div>
+    </div>
+  </section>
+
   <!-- --- 4. FEEDBACK VIEW --- -->
   <section id="feedback" class="view-container">
     <div class="container">
@@ -1099,6 +1128,22 @@
     </div>
   </section>
 
+  <!-- --- EVENT DETAIL DRAWER/MODAL --- -->
+  <div class="event-modal-overlay" id="event-detail-modal">
+    <div class="event-modal-content">
+      <button class="event-modal-close" id="event-modal-close-btn" aria-label="Close Modal">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      
+      <div class="event-modal-body" id="event-modal-body-content">
+        <!-- Content dynamically injected here by app.js -->
+      </div>
+    </div>
+  </div>
+
   <!-- --- TOAST CONTROLLER --- -->
   <div class="toast-container" id="toast-container"></div>
 
@@ -1120,7 +1165,8 @@
           <ul class="footer-links">
             <li><a href="#home" class="footer-link">Home</a></li>
             <li><a href="#about" class="footer-link">About Mission</a></li>
-            <li><a href="#community" class="footer-link">Rhythm & events</a></li>
+            <li><a href="#community" class="footer-link">Rhythm & Sprints</a></li>
+            <li><a href="#events" class="footer-link">Conducted Events</a></li>
           </ul>
         </div>
 

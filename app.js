@@ -562,31 +562,32 @@ document.addEventListener('DOMContentLoaded', () => {
     githubLink: "https://github.com/abhiyantrix/hackathon-boilerplate",
     slidesLink: "https://linkedin.com/company/abhiyantrix27"
   },
-  // {
-  //   id: "subject-roadmaps-orientation",
-  //   name: "Subject Roadmaps & Academic Success",
-  //   category: "orientation",
-  //   categoryLabel: "Academic Sprints",
-  //   date: "January 15, 2026",
-  //   speaker: "AbhiyantriX Team",
-  //   participants: "100+ Students",
-  //   description: "Resource mapping, orientation sessions, and engineering blueprints mapping university curricula to actual production jobs.",
-  //   longDescription: "A special academic alignment sprint focused on bridging the gap between textbook engineering models and corporate engineering environments. We provided subject roadmaps for Data Structures, Database Systems, and Computer Networks. Muthusam and Shreyas shared their own notes, mapping dry academic theories to live stacks (like mapping network handshakes to API request lifecycles and SQL normalization to scalable PostgreSQL indexing).",
-  //   takeaways: [
-  //     "Interactive roadmap PDFs for core engineering subjects",
-  //     "Recommended open-source tools matching university specs",
-  //     "Direct peer guidance for mastering DSA during college",
-  //     "Real-world application briefs for academic projects"
-  //   ],
-  //   images: [
-  //     "assets/subjects session.jpg",
-  //     "assets/logo.png",
-  //     "assets/abimg0.png"
-  //   ],
-  //   lumaLink: "https://lu.ma/subject-roadmaps-orientation",
-  //   githubLink: "https://github.com/abhiyantrix/subject-roadmaps",
-  //   slidesLink: "https://linkedin.com/company/abhiyantrix27"
-  // },
+  {
+    id: "subject-roadmaps-orientation",
+    name: "The Internship Reality Check: Insights from HR & Industry",
+    category: "orientation",
+    categoryLabel: "Academic Sprints",
+    date: "June 06, 2026",
+    speaker: "Bhargavi M",
+    participants: "100+ Students",
+    description: "​Getting an internship is often the first step toward building a successful career, but many students struggle with where to start, how to prepare, and what companies actually expect.",
+    longDescription: "A special academic alignment sprint focused on bridging the gap between textbook engineering models and corporate engineering environments. We provided subject roadmaps for Data Structures, Database Systems, and Computer Networks. Muthusam and Shreyas shared their own notes, mapping dry academic theories to live stacks (like mapping network handshakes to API request lifecycles and SQL normalization to scalable PostgreSQL indexing).",
+    takeaways: [
+      "Interactive roadmap PDFs for core engineering subjects",
+      "Recommended open-source tools matching university specs",
+      "Direct peer guidance for mastering DSA during college",
+      "Real-world application briefs for academic projects"
+    ],
+    images: [
+      "assets/subjects session.jpg",
+      "assets/logo.png",
+      "assets/abimg0.png"
+    ],
+    lumaLink: "https://luma.com/0jc1mjfb",
+    githubLink: "https://github.com/abhiyantrix/subject-roadmaps",
+    slidesLink: "https://linkedin.com/company/abhiyantrix27",
+    directRedirect: true
+  },
   // {
   //   id: "weekly-checkins-sprints",
   //   name: "Weekly Technical Check-Ins & Sprints",
@@ -642,6 +643,27 @@ function renderEvents(filter = "all") {
     card.className = "event-card animate-fade-up visible";
     card.setAttribute('data-id', evt.id);
 
+    const actionBtnHTML = evt.directRedirect
+      ? `
+          <button class="event-card-action-btn view-luma-trigger" data-luma-url="${evt.lumaLink}">
+            <span>View on Luma</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </button>
+        `
+      : `
+          <button class="event-card-action-btn view-details-trigger" data-evt-id="${evt.id}">
+            <span>View Details & Resources</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        `;
+
     card.innerHTML = `
         <div class="event-gallery-stack" data-evt-id="${evt.id}">
           <span class="gallery-interactive-hint">
@@ -693,13 +715,7 @@ function renderEvents(filter = "all") {
             </div>
           </div>
           
-          <button class="event-card-action-btn view-details-trigger" data-evt-id="${evt.id}">
-            <span>View Details & Resources</span>
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </button>
+          ${actionBtnHTML}
         </div>
       `;
     eventsContainer.appendChild(card);
@@ -751,9 +767,18 @@ function bindGalleryShuffler() {
 // Modal Dynamic Openers Bindings
 function bindModalTriggers() {
   document.querySelectorAll('.view-details-trigger').forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
       const id = btn.getAttribute('data-evt-id');
       openEventDetails(id);
+    });
+  });
+
+  document.querySelectorAll('.view-luma-trigger').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const url = btn.getAttribute('data-luma-url');
+      window.open(url, '_blank');
     });
   });
 
@@ -763,7 +788,12 @@ function bindModalTriggers() {
         return;
       }
       const id = card.getAttribute('data-id');
-      openEventDetails(id);
+      const evt = EVENTS_DATA.find(evt => evt.id === id);
+      if (evt && evt.directRedirect) {
+        window.open(evt.lumaLink, '_blank');
+      } else {
+        openEventDetails(id);
+      }
     });
   });
 }

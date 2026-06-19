@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
   // --- 1.5. CONTACT MAILTO REDIRECTOR & CLIPBOARD HELPER ---
   const contactCardEmail = document.querySelector('.contact-card[href^="mailto:"]');
   if (contactCardEmail) {

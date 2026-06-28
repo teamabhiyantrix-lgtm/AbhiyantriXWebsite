@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- 1. WHATSAPP LINK REDIRECTOR ---
   // Constant URL placeholder defined in prompt requirements
-  const WHATSAPP_COMMUNITY_INVITE_URL = "https://chat.whatsapp.com/Fp9jYfGvtQaBmyID4rCdyC";
+  const WHATSAPP_COMMUNITY_INVITE_URL = "https://chat.whatsapp.com/G07L8E5Da0eBgTJ4vMMwJG";
 
   const whatsappButtons = document.querySelectorAll('.whatsapp-btn, .social-icon[aria-label="WhatsApp Invite Link"]');
   whatsappButtons.forEach(btn => {
